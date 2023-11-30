@@ -5,6 +5,10 @@
 |  ----  | ----   | ----  |  
 | v2ray  | [v2rayNG](https://github.com/2dust/v2rayNG/releases) | [v2rayN](https://github.com/2dust/v2rayN/releases) |
   
-### 节点更新订阅  v2ray
+### 节点更新订阅  trojan
+时效短，但定期更新
 - `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/trojan`
-- `https://raw.fastgit.org/Huibq/TrojanLinks/master/links/trojan`
+
+### 防失联节点  vmess
+时效长一点，很少更新
+- `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess`
