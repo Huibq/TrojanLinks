@@ -7,7 +7,10 @@
   
 ### 节点更新订阅  trojan
 时效短，但定期更新
+此链接无法直接更新
 - `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/trojan`
+此链接可直接更新
+- `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/trojan`
 
 ### 防失联节点  vmess
 时效长一点，很少更新
