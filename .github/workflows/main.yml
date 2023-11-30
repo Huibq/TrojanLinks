@@ -45,4 +45,4 @@ jobs:
         git config --global user.email "actions@github.com"
         git add ./links
         git commit -m "更新时间 $(date '+%Y-%m-%d %H:%M:%S')"
-        git push origin main
+        git push origin master
