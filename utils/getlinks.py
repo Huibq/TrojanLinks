@@ -118,7 +118,7 @@ def main():
             sb.append(link['d'])
             sb.append("\n")
         trojan_links = base64.b64encode((''.join(sb)).encode('utf-8')).decode()
-        with open("../links/trojan", "w") as f:
+        with open("./links/trojan", "w") as f:
             f.write(trojan_links)
     except Exception as e:
         print(e)
