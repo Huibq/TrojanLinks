@@ -16,3 +16,10 @@
 ### 防失联节点  vmess
 时效长一点，很少更新
 - `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess`
+
+### 待更新 欢迎Star
+```any
+1.支持clash订阅  （待更新）
+2.增加爬取数量   （待更新）
+...
+```
