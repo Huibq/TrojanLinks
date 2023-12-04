@@ -10,8 +10,10 @@
 - 此链接无法直接更新
 - `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/trojan`
 
-- 此链接可直接更新
+- 此链接可直接更新但有延迟
 - `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/trojan`
+- cloud flare反代（推荐）
+- `https://trojan-596.pages.dev/Huibq/TrojanLinks/master/links/trojan`
 
 ### 防失联节点  vmess
 时效长一点，很少更新
