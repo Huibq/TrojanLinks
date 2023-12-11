@@ -10,7 +10,7 @@
 - 此链接无法直接更新
 - `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/trojan`
 
-- 代理连接
+- 代理链接
 - `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/trojan`
 
 ### 防失联节点  vmess
