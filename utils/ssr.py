@@ -105,27 +105,31 @@ def get_login():
 
 
 if __name__ == '__main__':
-    web()
-    add_share()
-    time.sleep(4)
-    node_list = json.loads(AESecb.decrypt(get_login()))['goserverlist']
-    SSR = ''
-    for i in node_list:
-        name = i['name']
-        host = i['host']
-        remotePort = i['remotePort']
-        password = i['password']
-        protocol = i['protocol']
-        protocol_param = i['protocol_param']
-        obfs = i['obfs']
-        method = i['method']
-        nodeinfo = host + ':' + str(
-            remotePort) + ':' + protocol + ':' + method + ':' + obfs + ':' + base64.urlsafe_b64encode(
-            password.encode()).decode() + '/?' + f'obfsparam=&protoparam={base64.urlsafe_b64encode(protocol_param.encode()).decode().strip("=")}&remarks={base64.urlsafe_b64encode(name.encode()).decode().rstrip("=")}&group='
-        ssr = 'ssr://' + base64.urlsafe_b64encode(nodeinfo.encode()).decode().rstrip("=")
-        SSR.join(ssr)
-        SSR.join('\n')
-        if i == node_list[19]:
-            break
-    with open("./links/ssr", "w") as f:
-        f.write(base64.b64encode(SSR.encode()).decode())
+    try:
+        web()
+        add_share()
+        time.sleep(4)
+        node_list = json.loads(AESecb.decrypt(get_login()))['goserverlist']
+        SSR = ''
+        for i in node_list:
+            name = i['name']
+            host = i['host']
+            remotePort = i['remotePort']
+            password = i['password']
+            protocol = i['protocol']
+            protocol_param = i['protocol_param']
+            obfs = i['obfs']
+            method = i['method']
+            nodeinfo = host + ':' + str(
+                remotePort) + ':' + protocol + ':' + method + ':' + obfs + ':' + base64.urlsafe_b64encode(
+                password.encode()).decode() + '/?' + f'obfsparam=&protoparam={base64.urlsafe_b64encode(protocol_param.encode()).decode().strip("=")}&remarks={base64.urlsafe_b64encode(name.encode()).decode().rstrip("=")}&group='
+            ssr = 'ssr://' + base64.urlsafe_b64encode(nodeinfo.encode()).decode().rstrip("=")
+            SSR.join(ssr)
+            SSR.join('\n')
+            if i == node_list[19]:
+                break
+        with open("./links/ssr", "w") as f:
+            f.write(base64.b64encode(SSR.encode()).decode())
+
+    except Exception as E:
+        print(E)
