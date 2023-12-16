@@ -4,14 +4,17 @@
 |  工具  | Android  | Windows  |  
 |  ----  | ----   | ----  |  
 | v2ray  | [v2rayNG](https://github.com/2dust/v2rayNG/releases) | [v2rayN](https://github.com/2dust/v2rayN/releases) |
+| ssrray  | [SSRRAY](https://github.com/xxf098/shadowsocksr-v2ray-trojan-android/releases) |  [无]|
   
 ### 节点更新订阅  trojan
-时效短，但定期更新
-- 此链接无法直接更新
+- Trojan更新链接
 - `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/trojan`
 
-- 代理链接
+- Trojan更新代理链接
 - `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/trojan`
+
+- SSR更新链接
+- `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ssr`
 
 ### 防失联节点  vmess
 时效长一点，很少更新
