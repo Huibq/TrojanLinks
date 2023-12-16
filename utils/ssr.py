@@ -124,8 +124,7 @@ if __name__ == '__main__':
                 remotePort) + ':' + protocol + ':' + method + ':' + obfs + ':' + base64.urlsafe_b64encode(
                 password.encode()).decode() + '/?' + f'obfsparam=&protoparam={base64.urlsafe_b64encode(protocol_param.encode()).decode().strip("=")}&remarks={base64.urlsafe_b64encode(name.encode()).decode().rstrip("=")}&group='
             ssr = 'ssr://' + base64.urlsafe_b64encode(nodeinfo.encode()).decode().rstrip("=")
-            SSR.join(ssr)
-            SSR.join('\n')
+            SSR += ssr + '\n'
             if i == node_list[19]:
                 break
         with open("./links/ssr", "w") as f:
