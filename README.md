@@ -6,7 +6,7 @@
 | v2ray  | [v2rayNG](https://github.com/2dust/v2rayNG/releases) | [v2rayN](https://github.com/2dust/v2rayN/releases) |
 | ssrray  | [SSRRAY](https://github.com/xxf098/shadowsocksr-v2ray-trojan-android/releases) |  [无]|
   
-# 更多分享尽在TG频道
+# 更多分享尽在TG群组
 ## https://t.me/+7cXPoNsa0p9lMTk1
 
 ### 节点更新订阅  trojan
