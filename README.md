@@ -9,6 +9,10 @@
 # 更多分享尽在TG群组
 ## https://t.me/+7cXPoNsa0p9lMTk1
 
+群组满20人上线vless订阅
+
+![img_2.png](md/测试图.png)
+
 ### 节点更新订阅  trojan
 - Trojan更新链接
 - `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/trojan`
