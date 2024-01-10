@@ -9,23 +9,26 @@
 # 更多分享尽在TG群组
 ## https://t.me/+7cXPoNsa0p9lMTk1
 
-群组满20人上线vless订阅
+新上线vless订阅
 
 ![img_2.png](md/测试图.png)
 
-### 节点更新订阅  trojan
-- Trojan更新链接
-- `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/trojan`
+### 节点更新订阅
+- Trojan订阅链接
+- `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/trojan`  源
+- `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/trojan`  CDN
 
-- Trojan更新代理链接
-- `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/trojan`
+- vless订阅链接
+- `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vless`  源
+- `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/vless`  CDN
 
-- SSR更新链接
-- `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ssr`
+- SSR订阅
+- `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ssr`  源
+- `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/ssr`  CDN
 
 ### 防失联节点  vmess
 时效长一点，很少更新
-- `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess`
+- `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/vmess`
 
 ### 待更新 欢迎Star
 ```any
