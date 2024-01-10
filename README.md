@@ -26,6 +26,10 @@
 - `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ssr`  源
 - `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/ssr`  CDN
 
+- 混合抓取的节点
+- `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/temporary`  源
+- `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/temporary`  CDN
+
 ### 防失联节点  vmess
 时效长一点，很少更新
 - `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/vmess`
