@@ -92,7 +92,6 @@ def get_login():
         'accept-encoding': 'gzip',
     }
     text = f'{{"imei":"{Id}","platform":"android","version_number":46,"models":"MI 9","sdk":"30","m":"1572F5F911FFDF9028B4A2F763C310F0","c":4}}'
-    print(text)
     value = AESecb.encrypt(text).upper()
     now = datetime.now()
     formatted_time = now.strftime("%Y年%m月%d日%H:%M:%S")

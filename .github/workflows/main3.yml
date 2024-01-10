@@ -1,0 +1,49 @@
+name: getvless
+
+# 触发条件
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '0 8 * * *'
+
+env: # 设置环境变量
+  TZ: Asia/Shanghai
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 迁出代码
+      uses: actions/checkout@v2
+    - name: 安装Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: 加载缓存
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/run_in_Actions/requirements2.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    - name: 设置时区
+      run: sudo timedatectl set-timezone 'Asia/Shanghai'
+    - name: 安装依赖
+      run: |
+        pip install -r ./utils/requirements2.txt
+    - name: 执行任务
+      env:
+        vless_api: ${{secrets.vless_api}}
+        vless_private_key: ${{secrets.vless_private_key}}
+        vless_authorization: ${{secrets.vless_authorization}}
+        vless_text: ${{secrets.vless_text}}
+      run: |
+        python ./utils/getvless.py
+    - name: Commit
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git add ./links
+        git commit -m "更新时间 $(date '+%Y-%m-%d %H:%M:%S')"
+        git push origin master
