@@ -36,8 +36,8 @@ def a(s, object0):
     return s + str(object0)
 
 
-def h():
-    return first
+def h(s, object0):
+    return a(s, object0)
 
 
 def binary_to_bytes(binary_str):
@@ -57,8 +57,8 @@ def node_decrypt(base64str):
             if v4 != c[0]:
                 s2 = format(d.find(v4), '06b')
                 while len(s2) != 6:
-                    s2 = h()
-                s1 = h()
+                    s2 = h('0', s2)
+                s1 = h(s1, s2)
             v2 = v3
             if v3 > v:
                 break
@@ -75,7 +75,6 @@ def get_node():
     info = f'{rand};{ss_key_2};{1705123416};{ss_key_3};15605292 '
     data = f'{"{"}"country":"MO","ac":4,"channel":"google","apiver":31,"it":{str(round(datetime.now().timestamp()) - 180)},"pkg":"{ss_str_1}","version":1675,"cpuabi":"arm64-v8a","rand":"{rand}","sig":"{custom_encode(info)}","uid":{userid},"lang":"ZH","vip":true,"device":{email}{"}"}'
     req = requests.post(url, data=custom_encode(data), headers=headers)
-    print(req.text)
     return req.json()['data']
 
 
@@ -84,7 +83,6 @@ def register():
     encoded = custom_encode(data)
     url = ss_api_2
     req = requests.post(url, headers=headers, data=encoded)
-    print(req.text)
     return req.json()['data']['id']
 
 
