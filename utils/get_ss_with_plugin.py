@@ -136,6 +136,6 @@ if __name__ == '__main__':
                 s_node = 'ss://YWVzLTEyOC1nY206NTYzNTYzMg@1.1.1.1:80?plugin=obfs-local%3Bobfs%3Dhttp%3Bobfs-host%3D1.1.1.1#%E6%96%B0%E5%8D%8F%E8%AE%AE'
             ss += s_node + '\n'
         with open("./links/ss_with_plugin", "w") as f:
-            f.write(base64.urlsafe_b64encode(ss.encode()).decode())
+            f.write(base64.b64encode(ss.encode()).decode())
     except Exception as e:
         print(e)
