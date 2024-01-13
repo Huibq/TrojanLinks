@@ -18,6 +18,10 @@
 - `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/trojan`  源
 - `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/trojan`  CDN
 
+- vmess订阅链接
+- `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess`  源
+- `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/vmess`  CDN
+
 - vless订阅链接
 - `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vless`  源
 - `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/vless`  CDN
@@ -34,9 +38,6 @@
 - `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/temporary`  源
 - `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/temporary`  CDN
 
-### 防失联节点  vmess
-时效长一点，很少更新
-- `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/vmess`
 
 ### 待更新 欢迎Star
 ```any

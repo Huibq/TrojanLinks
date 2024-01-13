@@ -29,7 +29,7 @@ def get_vmess():
 def decrypt(cipher_text: str, key: str) -> str:
     cipher = AES.new(key.encode('utf-8'), AES.MODE_CBC, key.encode('utf-8'))
     decrypted_text = cipher.decrypt(b64decode(cipher_text))
-    return decrypted_text.decode('utf-8').rstrip() + '\n'
+    return decrypted_text.decode('utf-8').rstrip()
 
 
 def get_address(ip):
@@ -72,11 +72,11 @@ if __name__ == "__main__":
                 print(e)
                 address = vmess_dict['add']
             vmess_dict['ps'] = address + '|Github搜索TrojanLinks'
-            nodes.append("vmess://" + base64.b64encode(json.dumps(vmess_dict).encode()).decode())
+            nodes.append("vmess://" + base64.b64encode(json.dumps(vmess_dict).encode()).decode() + '\n')
         except Exception as e:
             print(e)
         time.sleep(3)
 
     vmess = ''.join(list(set(nodes)))
-    with open("./links/trojan", "w") as f:
+    with open("./links/vemss", "w") as f:
         f.write(base64.b64encode(vmess.encode()).decode())
