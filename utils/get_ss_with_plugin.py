@@ -75,6 +75,7 @@ def get_node():
     info = f'{rand};{ss_key_2};{1705123416};{ss_key_3};15605292 '
     data = f'{"{"}"country":"MO","ac":4,"channel":"google","apiver":31,"it":{str(round(datetime.now().timestamp()) - 180)},"pkg":"{ss_str_1}","version":1675,"cpuabi":"arm64-v8a","rand":"{rand}","sig":"{custom_encode(info)}","uid":{userid},"lang":"ZH","vip":true,"device":{email}{"}"}'
     req = requests.post(url, data=custom_encode(data), headers=headers)
+    print(req.text)
     return req.json()['data']
 
 
@@ -83,6 +84,7 @@ def register():
     encoded = custom_encode(data)
     url = ss_api_2
     req = requests.post(url, headers=headers, data=encoded)
+    print(req.text)
     return req.json()['data']['id']
 
 
