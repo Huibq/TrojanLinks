@@ -118,7 +118,7 @@ if __name__ == '__main__':
         userid = register()
         first = node_decrypt(get_node())
         second = json.loads(first[first.find(ss_str_2) + 9:first.find(ss_str_3) - 3].replace(r'\"', '"'))
-        third = json.loads(first[first.find(ss_str_3) + 12:first.find(ss_str_4) - 3].replace(r'\"', '"').replace(r'\\u0026', '&'))
+        third = json.loads(first[first.find(ss_str_3) + 12:first.find(ss_str_4) - 3].replace(r'\"', '"').replace(r'\u0026', '&'))
         ss = ''
         for node in third[1:]:
             ip = second[node["host"]]
