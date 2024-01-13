@@ -78,5 +78,5 @@ if __name__ == "__main__":
         time.sleep(3)
 
     vmess = ''.join(list(set(nodes)))
-    with open("./links/vemss", "w") as f:
+    with open("./links/vmess", "w") as f:
         f.write(base64.b64encode(vmess.encode()).decode())
