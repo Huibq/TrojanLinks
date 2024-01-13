@@ -116,10 +116,9 @@ if __name__ == '__main__':
     }
     try:
         userid = register()
-        dc_node = node_decrypt(get_node())
-        first = dc_node
+        first = node_decrypt(get_node())
         second = json.loads(first[first.find(ss_str_2) + 9:first.find(ss_str_3) - 3].replace(r'\"', '"'))
-        third = json.loads(first[first.find(ss_str_3) + 12:first.find(ss_str_4) - 3].replace(r'\"', '"'))
+        third = json.loads(first[first.find(ss_str_3) + 12:first.find(ss_str_4) - 3].replace(r'\"', '"').replace(r'\\u0026', '&'))
         ss = ''
         for node in third[1:]:
             ip = second[node["host"]]
@@ -137,6 +136,6 @@ if __name__ == '__main__':
                 s_node = 'ss://YWVzLTEyOC1nY206NTYzNTYzMg@1.1.1.1:80?plugin=obfs-local%3Bobfs%3Dhttp%3Bobfs-host%3D1.1.1.1#%E6%96%B0%E5%8D%8F%E8%AE%AE'
             ss += s_node + '\n'
         with open("./links/ss_with_plugin", "w") as f:
-            f.write(base64.b64encode(ss.encode()).decode())
+            f.write(base64.urlsafe_b64encode(ss.encode()).decode())
     except Exception as e:
         print(e)
