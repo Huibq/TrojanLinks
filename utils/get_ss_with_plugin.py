@@ -118,11 +118,11 @@ if __name__ == '__main__':
         userid = register()
         first = node_decrypt(get_node())
         second = json.loads(first[first.find(ss_str_2) + 9:first.find(ss_str_3) - 3].replace(r'\"', '"'))
-        third = json.loads(first[first.find(ss_str_3) + 12:first.find(ss_str_4) - 3].replace(r'\"', '"').replace('g12sQi#ss#\u00261', 'g12sQi#ss#&1'))
+        third = json.loads(first[first.find(ss_str_3) + 12:first.find(ss_str_4) - 3].replace(r'\"', '"'))
         ss = ''
         for node in third[1:]:
             ip = second[node["host"]]
-            method = node["method"] + ':' + node['password']
+            method = node["method"] + ':' + node['password'].replace('g12sQi#ss#\u00261', 'g12sQi#ss#&1')
             if node['plugin'] == ss_str_5:
                 s_node = 'ss://' + base64.urlsafe_b64encode(method.encode()).decode() + '@' + ip + ':' + str(node[
                     'port']) + '?plugin=v2ray-plugin%3Bhost%3D' + ip + '#' + node['name'] + '|Github%E6%90%9C%E7%B4%A2TrojanLinks'
@@ -131,11 +131,11 @@ if __name__ == '__main__':
                     'port']) + '?plugin=v2ray-plugin%3Bhost%3D' + node['cdn'].replace("@", "") + '%3Btls#' + node['name'] + '|Github%E6%90%9C%E7%B4%A2TrojanLinks'
             elif node['plugin'] == ss_str_7:
                 s_node = 'ss://' + base64.urlsafe_b64encode(method.encode()).decode() + '@' + ip + ':' + str(node[
-                    'port']) + '?plugin=obfs-local%3Bobfs%3Dhttp%3Bobfs-host%3D' + ip + '#' + node['name'] + '|Github%E6%90%9C%E7%B4%A2TrojanLinks'
+                    'port']) + '?plugin=obfs-local%3Bhost%3D' + ip + '#' + node['name'] + '|Github%E6%90%9C%E7%B4%A2TrojanLinks'
             else:
                 s_node = 'ss://YWVzLTEyOC1nY206NTYzNTYzMg@1.1.1.1:80?plugin=obfs-local%3Bobfs%3Dhttp%3Bobfs-host%3D1.1.1.1#%E6%96%B0%E5%8D%8F%E8%AE%AE'
             ss += s_node + '\n'
         with open("./links/ss_with_plugin", "w") as f:
-            f.write(ss)
+            f.write(base64.b64encode(ss.encode()).decode())
     except Exception as e:
         print(e)
