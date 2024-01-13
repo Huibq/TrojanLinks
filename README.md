@@ -26,6 +26,10 @@
 - `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ssr`  源
 - `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/ssr`  CDN
 
+- SS订阅
+- `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ss_with_plugin`  源
+- `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/ss_with_plugin`  CDN
+
 - 混合抓取的节点
 - `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/temporary`  源
 - `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/temporary`  CDN
