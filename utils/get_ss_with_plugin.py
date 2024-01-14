@@ -122,7 +122,7 @@ if __name__ == '__main__':
         ss = ''
         for node in third[1:]:
             ip = second[node["host"]]
-            method = node["method"] + ':' + node['password'].replace('g12sQi#ss#\u00261', 'g12sQi#ss#&1')
+            method = node["method"] + ':' + node['password'].replace(r'g12sQi#ss#\u00261', 'g12sQi#ss#&1')
             if node['plugin'] == ss_str_5:
                 s_node = 'ss://' + base64.urlsafe_b64encode(method.encode()).decode() + '@' + ip + ':' + str(node[
                     'port']) + '?plugin=v2ray-plugin%3Bhost%3D' + ip + '#' + node['name'] + '|Github%E6%90%9C%E7%B4%A2TrojanLinks'
