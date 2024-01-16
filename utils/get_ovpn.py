@@ -78,6 +78,7 @@ def ra():
         "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 10; MI 9 MIUI/20.9.4)"
     }
     req = requests.get(url, headers=header)
+    print()
     return req.json()['rsa']
 
 
@@ -87,9 +88,10 @@ def a():
         'unique_id': ovpn_user,
         'tourist_id': '84385722',
         'unique_type': '2',
-        'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 8.1.0; MI 9 MIUI/V9.5.6.0.OEACNFA)'
+        'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 8.1.0; MI 9 MIUI/V9.5.6.0.OEACNFA)',
+        'Connection': 'Keep-Alive'
     }
-    req = requests.get(url, headers)
+    req = requests.get(url, headers=headers)
     print(req.text)
 
 
