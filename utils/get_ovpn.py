@@ -35,7 +35,6 @@ def main():
             url += f"&version={version}"
             data = g(url)
             config = d(data[0], key, data[1])
-            print(config)
             ip_address = re.findall(r'\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b', config)[0]
             url = f'https://ip125.com/api/{ip_address}?lang=zh-CN'
             head = {
@@ -44,16 +43,15 @@ def main():
             }
             country_info = requests.get(url, headers=head).json()
             address = country_info['country'] + ip_address
-            with open(f"./links/Openvpn/{address}.ovpn", "w") as conf:
+            with open(f"../links/Openvpn/{address}.ovpn", "w") as conf:
                 conf.write(base64.b64encode(config.encode()).decode())
-        except Exception as e:
-            print(e)
+        except Exception as E:
+            print(E)
 
 
 def g(url):
     headers = {"User-Agent": "Dalvik/2.1.0 (Linux; U; Android 10; MI 9 MIUI/20.9.4)", "version_name": f'{version}'}
     response = requests.get(url, headers=headers)
-    print(response.text)
     return response.text, response.headers.get('aesIV')
 
 
@@ -85,9 +83,13 @@ def ra():
 
 if __name__ == "__main__":
     version = '2.1.8.5'
-    ovpn_api_1 = os.environ['ovpn_api_1']
-    ovpn_api_2 = os.environ['ovpn_api_3']
-    ovpn_api_3 = os.environ['ovpn_api_3']
-    ovpn_user = os.environ['ovpn_user']
+    # ovpn_api_1 = os.environ['ovpn_api_1']
+    # ovpn_api_2 = os.environ['ovpn_api_3']
+    # ovpn_api_3 = os.environ['ovpn_api_3']
+    # ovpn_user = os.environ['ovpn_user']
+    ovpn_api_1 = 'http://spacevpn.tech/spacevpn/getServerListInfo?&language=zh'
+    ovpn_api_2 = 'http://spacevpn.tech/spacevpn/config'
+    ovpn_api_3 = 'https://spacevpn.tech/spacevpn/getInitData'
+    ovpn_user = 'c48c6e6d3ebc3f87'
     p = ra()
     main()
