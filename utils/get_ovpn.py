@@ -35,6 +35,7 @@ def main():
             url += f"&version={version}"
             data = g(url)
             config = d(data[0], key, data[1])
+            print(config)
             ip_address = re.findall(r'\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b', config)[0]
             url = f'https://ip125.com/api/{ip_address}?lang=zh-CN'
             head = {
