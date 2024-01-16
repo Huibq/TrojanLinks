@@ -7,6 +7,7 @@
 # -------------------------------------------------------------------------------
 import ast
 import base64
+import os
 import random
 import re
 import string
@@ -26,7 +27,7 @@ def main():
     for link in req:
         time.sleep(2)
         try:
-            url = ovpn_api2
+            url = ovpn_api_2
             url += f"?userId={ovpn_user}"
             url += f"&serverNumber={0}"
             key = k()
