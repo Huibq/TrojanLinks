@@ -104,4 +104,5 @@ if __name__ == "__main__":
     ovpn_user = os.environ['ovpn_user']
     p = ra()
     a()
+    a()
     main()
