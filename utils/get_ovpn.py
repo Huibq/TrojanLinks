@@ -83,13 +83,9 @@ def ra():
 
 if __name__ == "__main__":
     version = '2.1.8.5'
-    # ovpn_api_1 = os.environ['ovpn_api_1']
-    # ovpn_api_2 = os.environ['ovpn_api_3']
-    # ovpn_api_3 = os.environ['ovpn_api_3']
-    # ovpn_user = os.environ['ovpn_user']
-    ovpn_api_1 = 'http://spacevpn.tech/spacevpn/getServerListInfo?&language=zh'
-    ovpn_api_2 = 'http://spacevpn.tech/spacevpn/config'
-    ovpn_api_3 = 'https://spacevpn.tech/spacevpn/getInitData'
-    ovpn_user = 'c48c6e6d3ebc3f87'
+    ovpn_api_1 = os.environ['ovpn_api_1']
+    ovpn_api_2 = os.environ['ovpn_api_3']
+    ovpn_api_3 = os.environ['ovpn_api_3']
+    ovpn_user = os.environ['ovpn_user']
     p = ra()
     main()
