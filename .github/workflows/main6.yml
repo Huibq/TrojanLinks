@@ -37,6 +37,7 @@ jobs:
         ovpn_api_1: ${{secrets.ovpn_api_1}}
         ovpn_api_2: ${{secrets.ovpn_api_2}}
         ovpn_api_3: ${{secrets.ovpn_api_3}}
+        ovpn_api_4: ${{secrets.ovpn_api_4}}
         ovpn_user: ${{secrets.ovpn_user}}
       run: |
         python ./utils/get_ovpn.py
