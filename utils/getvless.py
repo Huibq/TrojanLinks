@@ -106,8 +106,6 @@ def get_node():
         f.write(base64.b64encode(Vless.encode()).decode())
 
 
-
-
 if __name__ == '__main__':
     api = os.environ['vless_api']
     private_key = os.environ['vless_private_key']
