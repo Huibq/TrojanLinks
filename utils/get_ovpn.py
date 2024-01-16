@@ -43,7 +43,7 @@ def main():
             }
             country_info = requests.get(url, headers=head).json()
             address = country_info['country'] + ip_address
-            with open(f"../links/Openvpn/{address}.ovpn", "w") as conf:
+            with open(f"./links/Openvpn/{address}.ovpn", "w") as conf:
                 conf.write(base64.b64encode(config.encode()).decode())
         except Exception as E:
             print(E)
