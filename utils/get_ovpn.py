@@ -81,6 +81,18 @@ def ra():
     return req.json()['rsa']
 
 
+def a():
+    url = ovpn_api_4
+    headers = {
+        'unique_id': ovpn_user,
+        'tourist_id': '84385722',
+        'unique_type': '2',
+        'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 8.1.0; MI 9 MIUI/V9.5.6.0.OEACNFA)'
+    }
+    requests.get(url, headers)
+
+
+
 if __name__ == "__main__":
     version = '2.1.8.5'
     ovpn_api_1 = os.environ['ovpn_api_1']
@@ -88,4 +100,5 @@ if __name__ == "__main__":
     ovpn_api_3 = os.environ['ovpn_api_3']
     ovpn_user = os.environ['ovpn_user']
     p = ra()
+    a()
     main()
