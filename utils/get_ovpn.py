@@ -103,6 +103,4 @@ if __name__ == "__main__":
     ovpn_api_4 = os.environ['ovpn_api_4']
     ovpn_user = os.environ['ovpn_user']
     p = ra()
-    a()
-    a()
     main()
