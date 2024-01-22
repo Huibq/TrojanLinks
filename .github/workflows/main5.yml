@@ -40,6 +40,8 @@ jobs:
         vmess_code: ${{secrets.vmess_code}}
         vmess_token: ${{secrets.vmess_token}}
         vmess_name: ${{secrets.vmess_name}}
+        bot_token: ${{secrets.bot_token}}
+        chat_id: ${{secrets.chat_id}}
       run: |
         python ./utils/get_vmess.py
     - name: Commit

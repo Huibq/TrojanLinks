@@ -38,6 +38,8 @@ jobs:
         vless_private_key: ${{secrets.vless_private_key}}
         vless_authorization: ${{secrets.vless_authorization}}
         vless_text: ${{secrets.vless_text}}
+        bot_token: ${{secrets.bot_token}}
+        chat_id: ${{secrets.chat_id}}
       run: |
         python ./utils/getvless.py
     - name: Commit

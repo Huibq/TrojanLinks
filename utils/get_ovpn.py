@@ -17,6 +17,8 @@ import requests
 from Crypto.Cipher import PKCS1_v1_5, AES
 from Crypto.PublicKey import RSA
 from Crypto.Util.Padding import unpad
+from Telegram_bot import send_message
+from datetime import datetime
 
 
 def main():
@@ -104,3 +106,5 @@ if __name__ == "__main__":
     ovpn_user = os.environ['ovpn_user']
     p = ra()
     main()
+    message = datetime.now().strftime("%Y年%m月%d日%H:%M:%S") + '\n' + 'ovpn配置已重新获取：' + '\n' + 'https://raw.staticdn.net/Huibq/TrojanLinks/master/links/ss_with_plugin'
+    send_message(os.environ['chat_id'], message, os.environ['bot_token'])

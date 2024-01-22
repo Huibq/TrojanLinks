@@ -11,6 +11,7 @@ import os
 import random
 from datetime import datetime
 import requests
+from Telegram_bot import send_message
 
 
 def custom_encode(s):
@@ -139,3 +140,5 @@ if __name__ == '__main__':
             f.write(base64.b64encode(ss.encode()).decode())
     except Exception as e:
         print(e)
+    message = datetime.now().strftime("%Y年%m月%d日%H:%M:%S") + '\n' + 'ss订阅已更新：' + '\n' + 'https://raw.staticdn.net/Huibq/TrojanLinks/master/links/ss_with_plugin'
+    send_message(os.environ['chat_id'], message, os.environ['bot_token'])

@@ -9,6 +9,7 @@ import json
 import os
 import time
 import uuid
+from datetime import datetime
 import requests
 import urllib3
 from Crypto.PublicKey import RSA
@@ -17,6 +18,7 @@ from Crypto.Cipher import AES
 from Crypto.Hash import MD5
 from Crypto.Util.Padding import unpad
 import base64
+from utils.Telegram_bot import send_message
 
 urllib3.disable_warnings()
 
@@ -113,3 +115,5 @@ if __name__ == '__main__':
     text = os.environ['vless_text']
     invite()
     get_node()
+    message = datetime.now().strftime("%Y年%m月%d日%H:%M:%S") + '\n' + 'vless订阅已更新：' + '\n' + 'https://raw.staticdn.net/Huibq/TrojanLinks/master/links/vless'
+    send_message(os.environ['chat_id'], message, os.environ['bot_token'])

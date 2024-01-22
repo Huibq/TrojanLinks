@@ -16,6 +16,7 @@ from Crypto.Util.Padding import pad, unpad
 from binascii import hexlify, unhexlify
 from datetime import datetime
 import urllib3
+from utils.Telegram_bot import send_message
 
 # 忽略证书警告
 urllib3.disable_warnings()
@@ -128,6 +129,7 @@ if __name__ == '__main__':
                 break
         with open("./links/ssr", "w") as f:
             f.write(base64.b64encode(SSR.encode()).decode())
-
     except Exception as E:
         print(E)
+    message = datetime.now().strftime("%Y年%m月%d日%H:%M:%S") + '\n' + 'ssr订阅已更新：' + '\n' + 'https://raw.staticdn.net/Huibq/TrojanLinks/master/links/ssr'
+    send_message(os.environ['chat_id'], message, os.environ['bot_token'])

@@ -7,9 +7,9 @@
 | ssrray  | [SSRRAY](https://github.com/xxf098/shadowsocksr-v2ray-trojan-android/releases) |  [无]|
   
 # 更多分享尽在TG群组
-## https://t.me/+7cXPoNsa0p9lMTk1
+### https://t.me/+7cXPoNsa0p9lMTk1
+### 加入电报群组，可及时获取订阅更新情况
 
-新上线vless订阅
 
 ![img_2.png](md/测试图.png)
 
@@ -44,5 +44,4 @@
 1.支持clash订阅  （待更新）
 2.增加爬取数量   （已更新）
 ...
-目前项目已经稳定，可能不会再更新了
 ```

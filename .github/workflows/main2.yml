@@ -38,6 +38,8 @@ jobs:
         host: ${{secrets.host}}
         host_1: ${{secrets.host_1}}
         host_2: ${{secrets.host_2}}
+        bot_token: ${{secrets.bot_token}}
+        chat_id: ${{secrets.chat_id}}
       run: |
         python ./utils/ssr.py
     - name: Commit

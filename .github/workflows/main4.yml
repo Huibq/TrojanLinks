@@ -46,6 +46,8 @@ jobs:
         ss_str_5: ${{secrets.ss_str_5}}
         ss_str_6: ${{secrets.ss_str_6}}
         ss_str_7: ${{secrets.ss_str_7}}
+        bot_token: ${{secrets.bot_token}}
+        chat_id: ${{secrets.chat_id}}
       run: |
         python ./utils/get_ss_with_plugin.py
     - name: Commit

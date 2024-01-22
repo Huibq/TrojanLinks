@@ -5,11 +5,14 @@
 # @文件         : TrojanLinks - getlinks.py
 # @创建时间     : 2023/11/30 16:09
 # -------------------------------------------------------------------------------
+from datetime import datetime
+
 import requests
 import random
 import base64
 import json
 import os
+from Telegram_bot import send_message
 
 url = os.environ['url']
 
@@ -121,3 +124,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+    message = datetime.now().strftime("%Y年%m月%d日%H:%M:%S") + '\n' + 'Trojan订阅已更新：' + '\n' + 'https://raw.staticdn.net/Huibq/TrojanLinks/master/links/trojan'
+    send_message(os.environ['chat_id'], message, os.environ['bot_token'])

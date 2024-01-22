@@ -15,6 +15,7 @@ from datetime import datetime
 import urllib3
 from Crypto.Cipher import AES
 from base64 import b64decode
+from Telegram_bot import send_message
 
 urllib3.disable_warnings()
 
@@ -80,3 +81,5 @@ if __name__ == "__main__":
     vmess = ''.join(list(set(nodes)))
     with open("./links/vmess", "w") as f:
         f.write(base64.b64encode(vmess.encode()).decode())
+    message = datetime.now().strftime("%Y年%m月%d日%H:%M:%S") + '\n' + 'vmess订阅已更新：' + '\n' + 'https://raw.staticdn.net/Huibq/TrojanLinks/master/links/vmess'
+    send_message(os.environ['chat_id'], message, os.environ['bot_token'])
