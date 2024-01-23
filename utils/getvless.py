@@ -18,7 +18,7 @@ from Crypto.Cipher import AES
 from Crypto.Hash import MD5
 from Crypto.Util.Padding import unpad
 import base64
-from utils.Telegram_bot import send_message
+from Telegram_bot import send_message
 
 urllib3.disable_warnings()
 

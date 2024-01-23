@@ -16,7 +16,7 @@ from Crypto.Util.Padding import pad, unpad
 from binascii import hexlify, unhexlify
 from datetime import datetime
 import urllib3
-from utils.Telegram_bot import send_message
+from Telegram_bot import send_message
 
 # 忽略证书警告
 urllib3.disable_warnings()
