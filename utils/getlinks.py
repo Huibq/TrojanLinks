@@ -13,7 +13,7 @@ import json
 import os
 from Telegram_bot import send_message
 
-url = os.environ['url']
+url = os.environ['trojan_url']
 
 
 class Decode:

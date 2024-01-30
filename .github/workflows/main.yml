@@ -34,7 +34,7 @@ jobs:
         pip install -r ./utils/requirements.txt
     - name: 执行任务
       env:
-        url: ${{secrets.url}}
+        trojan_url: ${{secrets.trojan_url}}
         bot_token: ${{secrets.bot_token}}
         chat_id: ${{secrets.chat_id}}
       run: |
