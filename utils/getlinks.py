@@ -123,5 +123,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-    message = '#trojan ' + '#订阅' + '\n' + datetime.now().strftime("%Y年%m月%d日%H:%M:%S") + '\n' + 'Trojan订阅已更新：' + '\n' + 'https://raw.staticdn.net/Huibq/TrojanLinks/master/links/trojan'
+    message = '#trojan ' + '#订阅' + '\n' + datetime.now().strftime("%Y年%m月%d日%H:%M:%S") + '\n' + 'Trojan订阅已更新：' + '\n' + 'https://raw.github.com/Huibq/TrojanLinks/master/links/trojan'
     send_message(os.environ['chat_id'], message, os.environ['bot_token'])
