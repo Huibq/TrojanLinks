@@ -8,12 +8,14 @@
 import json
 import os
 import uuid
+from datetime import datetime
 import requests
 import urllib3
 from Crypto.Hash import MD5
 from Crypto.Cipher import AES
 import base64
 import urllib.parse
+from utils.Telegram_bot import send_message
 
 urllib3.disable_warnings()
 
@@ -81,3 +83,6 @@ if __name__ == '__main__':
         ss += line.replace(domain, get_address(domain)).strip() + '|Github%E6%90%9C%E7%B4%A2TrojanLinks\n'
     with open("./links/ss", "w") as f:
         f.write(base64.b64encode(ss.encode()).decode())
+    message = '#ss ' + '#订阅' + '\n' + datetime.now().strftime(
+        "%Y年%m月%d日%H:%M:%S") + '\n' + 'ss订阅已更新：' + '\n' + 'https://raw.staticdn.net/Huibq/TrojanLinks/master/links/ss'
+    send_message(os.environ['chat_id'], message, os.environ['bot_token'])
