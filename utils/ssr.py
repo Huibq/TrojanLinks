@@ -131,5 +131,5 @@ if __name__ == '__main__':
             f.write(base64.b64encode(SSR.encode()).decode())
     except Exception as E:
         print(E)
-    message = '#ssr ' + '#订阅' + '\n' + datetime.now().strftime("%Y年%m月%d日%H:%M:%S") + '\n' + 'ssr订阅已更新：' + '\n' + 'https://raw.staticdn.net/Huibq/TrojanLinks/master/links/ssr'
+    message = '#ssr ' + '#订阅' + '\n' + datetime.now().strftime("%Y年%m月%d日%H:%M:%S") + '\n' + 'ssr订阅每天自动更新：' + '\n' + 'https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ssr'
     send_message(os.environ['chat_id'], message, os.environ['bot_token'])

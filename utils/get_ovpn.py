@@ -106,5 +106,5 @@ if __name__ == "__main__":
     ovpn_user = os.environ['ovpn_user']
     p = ra()
     main()
-    message = '#ovpn' + '\n' + datetime.now().strftime("%Y年%m月%d日%H:%M:%S") + '\n' + 'ovpn配置已重新获取：' + '\n' + 'https://github.com/Huibq/TrojanLinks/tree/master/links/Openvpn'
+    message = '#ovpn' + '\n' + datetime.now().strftime("%Y年%m月%d日%H:%M:%S") + '\n' + 'ovpn配置每天自动获取：' + '\n' + 'https://github.com/Huibq/TrojanLinks/tree/master/links/Openvpn'
     send_message(os.environ['chat_id'], message, os.environ['bot_token'])

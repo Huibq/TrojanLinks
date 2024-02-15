@@ -83,5 +83,5 @@ if __name__ == '__main__':
     with open("./links/ss", "w") as f:
         f.write(base64.b64encode(ss.encode()).decode())
     message = '#ss ' + '#订阅' + '\n' + datetime.now().strftime(
-        "%Y年%m月%d日%H:%M:%S") + '\n' + 'ss订阅已更新：' + '\n' + 'https://raw.staticdn.net/Huibq/TrojanLinks/master/links/ss'
+        "%Y年%m月%d日%H:%M:%S") + '\n' + 'ss订阅每35分钟自动更新：' + '\n' + 'https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ss'
     send_message(os.environ['chat_id'], message, os.environ['bot_token'])

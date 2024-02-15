@@ -140,5 +140,5 @@ if __name__ == '__main__':
             f.write(base64.b64encode(ss.encode()).decode())
     except Exception as e:
         print(e)
-    message = '#ss' + '\n' + datetime.now().strftime("%Y年%m月%d日%H:%M:%S") + '\n' + 'ss_with_plugin订阅已更新：' + '\n' + 'https://raw.staticdn.net/Huibq/TrojanLinks/master/links/ss_with_plugin'
+    message = '#ss' + '\n' + datetime.now().strftime("%Y年%m月%d日%H:%M:%S") + '\n' + 'ss_with_plugin订阅每6小时自动更新：' + '\n' + 'https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ss_with_plugin'
     send_message(os.environ['chat_id'], message, os.environ['bot_token'])

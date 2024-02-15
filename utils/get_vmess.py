@@ -81,5 +81,5 @@ if __name__ == "__main__":
     vmess = ''.join(list(set(nodes)))
     with open("./links/vmess", "w") as f:
         f.write(base64.b64encode(vmess.encode()).decode())
-    message = '#vmess ' + '#订阅' + '\n' + datetime.now().strftime("%Y年%m月%d日%H:%M:%S") + '\n' + 'vmess订阅已更新：' + '\n' + 'https://raw.staticdn.net/Huibq/TrojanLinks/master/links/vmess'
+    message = '#vmess ' + '#订阅' + '\n' + datetime.now().strftime("%Y年%m月%d日%H:%M:%S") + '\n' + 'vmess订阅每4小时自动更新：' + '\n' + 'https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess'
     send_message(os.environ['chat_id'], message, os.environ['bot_token'])
