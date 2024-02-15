@@ -72,8 +72,7 @@ if __name__ == '__main__':
     userinfo = json.loads(os.environ['ss_userinfo'])
     userinfo['uuid'] = str(uuid.uuid4()).replace('-', '')
     encoded_str = encode_url(encode(json.dumps(userinfo, separators=(',', ':'), ensure_ascii=False)))
-    data = f'value={encoded_str}'
-    text = requests.post(os.environ['ss_url'], data=data, headers=json.loads(os.environ['ss_headers']), verify=False).text
+    text = requests.post(os.environ['ss_url'], data=f'value={encoded_str}', headers=json.loads(os.environ['ss_headers']), verify=False).text
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari'
     }
