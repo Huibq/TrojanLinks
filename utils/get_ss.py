@@ -15,7 +15,7 @@ from Crypto.Hash import MD5
 from Crypto.Cipher import AES
 import base64
 import urllib.parse
-from utils.Telegram_bot import send_message
+from Telegram_bot import send_message
 
 urllib3.disable_warnings()
 
