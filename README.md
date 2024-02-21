@@ -34,9 +34,9 @@
 - `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ss_with_plugin`  源
 - `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/ss_with_plugin`  CDN
 
-### 随缘节点
-- `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/temporary`  源
-- `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/temporary`  CDN
+### 新SS节点
+- `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ss`  源
+- `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/ss`  CDN
 
 
 ### 待更新 欢迎Star
