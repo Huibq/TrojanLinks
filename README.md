@@ -15,8 +15,8 @@
 
 
 ### Trojan订阅链接
-`https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/trojan`  源
-`https://raw.staticdn.net/Huibq/TrojanLinks/master/links/trojan`  CDN
+- `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/trojan`  源
+- `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/trojan`  CDN
 
 ### vmess订阅链接
 - `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess`  源
