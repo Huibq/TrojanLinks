@@ -88,7 +88,7 @@ class Decode:
 
 def getlink():
     try:
-        headers = {"User-Agent": "Dalvik/2.1.0 (Linux; U; Android 10; MI 8 MIUI/20.9.4)"}
+        headers = {"User-Agent": "Dalvik/2.1.0 (Linux; U; Android 10; MI 9 MIUI/20.9.4)"}
         response = requests.get(url, headers=headers)
         return response.text
     except Exception as e:
@@ -111,7 +111,7 @@ def main():
             port = link['c']
             result = int(random.random() * len(port))
             sb.append(str(port[result]))
-            sb.append("?security=tls&alpn=h2,http/1.1&type=tcp&sni=www.myethblog.com&headerType=none#")
+            sb.append("?security=tls&alpn=h2,http/1.1&type=tcp&sni=appsvs.shop&headerType=none#")
             sb.append(link['d'] + '|Github搜索TrojanLinks')
             sb.append("\n")
         trojan_links = base64.b64encode((''.join(sb)).encode('utf-8')).decode()
