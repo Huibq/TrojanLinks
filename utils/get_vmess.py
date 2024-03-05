@@ -49,6 +49,7 @@ if __name__ == "__main__":
     vmess_name = os.environ['vmess_name']
     vmess_token = os.environ['vmess_token']
     vmess_code = os.environ['vmess_code']
+    recomm_code = os.environ['recomm_code']
     vemss_id = os.environ['vemss_id']
     vmess_api = os.environ['vmess_api']
     headers = {
@@ -58,10 +59,10 @@ if __name__ == "__main__":
     }
     params = {'vip': 'false', 'proto': 'v4', 'platform': 'android', 'ver': '8.3.71125',
               'deviceid': vemss_id, 'unicode': vemss_id, 't': str(round(datetime.now().timestamp() * 1000)),
-              'code': vmess_code, 'recomm_code': '', 'f': '2024-01-14',
-              'install': '2024-01-14', 'token': vmess_token,
-              'package': vmess_name, 'width': '362.72726', 'height': '770.1818',
-              'apps': '1883c547acfdcce30ead290c2b149fca'}
+              'code': vmess_code, 'recomm_code': recomm_code, 'f': '2024-01-14',
+              'install': '2024-01-14', 'token': '',
+              'package': vmess_name, 'width': '362.72726', 'height': '770.1818'
+              }
 
     nodes = []
     for i in range(20):

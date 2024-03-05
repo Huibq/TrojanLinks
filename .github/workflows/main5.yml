@@ -38,6 +38,7 @@ jobs:
         vmess_api: ${{secrets.vmess_api}}
         vemss_id: ${{secrets.vemss_id}}
         vmess_code: ${{secrets.vmess_code}}
+        recomm_code: ${{secrets.recomm_code}}
         vmess_token: ${{secrets.vmess_token}}
         vmess_name: ${{secrets.vmess_name}}
         bot_token: ${{secrets.bot_token}}
