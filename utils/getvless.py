@@ -64,7 +64,7 @@ def decrypt_aes(key, data):
 
 
 def get_node():
-    url = f'{api}/v2/vpnServerNodes?version=82'
+    url = f'{api}/v2/vpnServerNodes?version=83'
     header = {
         'authorization': authorization,
         'cache-control': 'no-cache',
