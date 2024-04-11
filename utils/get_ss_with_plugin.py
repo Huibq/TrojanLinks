@@ -134,7 +134,7 @@ if __name__ == '__main__':
                 s_node = 'ss://' + base64.urlsafe_b64encode(method.encode()).decode() + '@' + ip + ':' + str(node[
                     'port']) + '?plugin=obfs-local%3Bhost%3D' + ip + '#' + node['name'] + '|Github%E6%90%9C%E7%B4%A2TrojanLinks'
             else:
-                s_node = 'ss://YWVzLTEyOC1nY206NTYzNTYzMg@1.1.1.1:80?plugin=obfs-local%3Bobfs%3Dhttp%3Bobfs-host%3D1.1.1.1#%E6%96%B0%E5%8D%8F%E8%AE%AE'
+                s_node = 'ss://' + base64.urlsafe_b64encode(method.encode()).decode() + '@' + ip + ':' + str(node['port']) + '/#' + node['name']
             ss += s_node + '\n'
         with open("./links/ss_with_plugin", "w") as f:
             f.write(base64.b64encode(ss.encode()).decode())
