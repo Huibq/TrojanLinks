@@ -1,13 +1,6 @@
 # Trojanlinks
-# 每小时大概更新三次
+# 随缘更新
 免费节点都爬取自网络，请勿用于非法用途  
-|  工具  | Android  | Windows  |  
-|  ----  | ----   | ----  |  
-| v2ray  | [v2rayNG](https://github.com/2dust/v2rayNG/releases) | [v2rayN](https://github.com/2dust/v2rayN/releases) |
-| ssrray  | [SSRRAY](https://github.com/xxf098/shadowsocksr-v2ray-trojan-android/releases) |  [无]|
-  
-### 加入电报群组，可及时获取订阅更新情况
-
 
 ![img_2.png](md/测试图.png)
 
