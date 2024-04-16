@@ -2,9 +2,6 @@
 # 随缘更新
 免费节点都爬取自网络，请勿用于非法用途  
 
-![img_2.png](md/测试图.png)
-
-
 ### Trojan订阅链接
 - `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/trojan`  源
 - `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/trojan`  CDN
