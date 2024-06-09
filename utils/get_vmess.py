@@ -31,7 +31,7 @@ def get_vmess(ii):
 def decrypt(cipher_text: str, key: str) -> str:
     cipher = AES.new(key.encode('utf-8'), AES.MODE_CBC, key.encode('utf-8'))
     decrypted_text = cipher.decrypt(b64decode(cipher_text))
-    return decrypted_text.decode('utf-8').rstrip()
+    return decrypted_text.rstrip(b'\x00').decode('utf-8')
 
 
 def getlist():
@@ -82,7 +82,7 @@ if __name__ == "__main__":
     for i in List:
         try:
             vmess_dict = json.loads(base64.b64decode(decrypt(get_vmess(i), vemss_key)[8:]).decode())
-            vmess_dict['ps'] = '|Github搜索TrojanLinks'
+            vmess_dict['ps'] = 'Github搜索TrojanLinks'
             nodes.append("vmess://" + base64.b64encode(json.dumps(vmess_dict).encode()).decode() + '\n')
         except Exception as e:
             print(e)
@@ -91,5 +91,5 @@ if __name__ == "__main__":
     vmess = ''.join(list(set(nodes)))
     with open("./links/vmess", "w") as f:
         f.write(base64.b64encode(vmess.encode()).decode())
-    # message = '#vmess ' + '#订阅' + '\n' + datetime.now().strftime("%Y年%m月%d日%H:%M:%S") + '\n' + 'vmess订阅每4小时自动更新：' + '\n' + 'https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess'
-    # send_message(os.environ['chat_id'], message, os.environ['bot_token'])
+    message = '#vmess ' + '#订阅' + '\n' + datetime.now().strftime("%Y年%m月%d日%H:%M:%S") + '\n' + 'vmess订阅每天自动更新：' + '\n' + 'https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess'
+    send_message(os.environ['chat_id'], message, os.environ['bot_token'])

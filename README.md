@@ -6,9 +6,9 @@
 - `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/trojan`  源
 - `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/trojan`  CDN
 
-### vless订阅链接
-- `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vless`  源
-- `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/vless`  CDN
+### vmess订阅链接
+- `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess`  源
+- `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/vmess`  CDN
 
 ### SSR订阅
 - `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ssr`  源
