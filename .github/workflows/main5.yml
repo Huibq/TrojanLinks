@@ -36,6 +36,7 @@ jobs:
       env:
         vemss_key: ${{secrets.vemss_key}}
         vmess_api: ${{secrets.vmess_api}}
+        vmess_api2: ${{secrets.vmess_api2}}
         vemss_id: ${{secrets.vemss_id}}
         vmess_code: ${{secrets.vmess_code}}
         recomm_code: ${{secrets.recomm_code}}
