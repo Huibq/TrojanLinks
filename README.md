@@ -14,10 +14,6 @@
 - `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ssr`  源
 - `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/ssr`  CDN
 
-### 新SS节点
-- `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ss`  源
-- `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/ss`  CDN
-
 ### 停更
 ```any
 项目已停更...
