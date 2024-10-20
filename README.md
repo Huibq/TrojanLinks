@@ -14,7 +14,4 @@
 - `https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ssr`  源
 - `https://raw.staticdn.net/Huibq/TrojanLinks/master/links/ssr`  CDN
 
-### 停更
-```any
-项目已停更...
-```
+
