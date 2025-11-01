@@ -12,6 +12,7 @@ import uuid
 from datetime import datetime
 import requests
 import urllib3
+from urllib.parse import urljoin, urlparse
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
 from Crypto.Cipher import AES
@@ -22,9 +23,41 @@ from Telegram_bot import send_message
 
 urllib3.disable_warnings()
 
+def _normalise_base(candidate: str) -> str:
+    candidate = candidate.strip()
+    if not candidate:
+        raise ValueError("BASE_URL environment variable is set but empty")
 
-def invite():
-    url = f'{api}/addRefereeToUserReferral/'
+    parsed = urlparse(candidate)
+    if not parsed.scheme:
+        candidate = f"https://{candidate.lstrip('/')}"
+        parsed = urlparse(candidate)
+
+    if not parsed.scheme or not parsed.netloc:
+        raise ValueError("BASE_URL must contain a valid domain or host name")
+
+    return f"{parsed.scheme}://{parsed.netloc}/"
+
+
+def _resolve_base_url(api_url: str) -> str:
+    env_base = os.environ.get("BASE_URL")
+    if env_base:
+        return _normalise_base(env_base)
+
+    if api_url:
+        try:
+            return _normalise_base(api_url)
+        except ValueError:
+            parsed = urlparse(api_url)
+            if parsed.scheme and parsed.netloc:
+                return f"{parsed.scheme}://{parsed.netloc}/"
+
+    raise ValueError("BASE_URL environment variable is not set and could not be derived from vless_api")
+
+
+def invite(api_url: str):
+    base_url = _resolve_base_url(api_url)
+    url = urljoin(base_url, 'addRefereeToUserReferral/')
     headers = {
         'accept': 'application/json',
         'accept-charset': 'UTF-8',
@@ -113,7 +146,7 @@ if __name__ == '__main__':
     private_key = os.environ['vless_private_key']
     authorization = os.environ['vless_authorization']
     text = os.environ['vless_text']
-    invite()
+    invite(api)
     get_node()
     message = '#vless ' + '#订阅' + '\n' + datetime.now().strftime("%Y年%m月%d日%H:%M:%S") + '\n' + 'vless订阅每天自动更新：' + '\n' + 'https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vless'
     send_message(os.environ['chat_id'], message, os.environ['bot_token'])
